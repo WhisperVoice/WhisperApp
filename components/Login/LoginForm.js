@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import Dimensions from 'Dimensions';
 import {
   StyleSheet,
@@ -10,12 +9,10 @@ import {
   Image,
 } from 'react-native';
 
-import UserInput from './UserInput';
-import ButtonSubmit from './ButtonSubmit';
-import SignupSection from './SignupSection';
+import UserInput from '../SharedComponents/UserInput';
 
-import usernameImg from '../assets/images/username.png';
-import passwordImg from '../assets/images/password.png';
+import usernameImg from '../../assets/images/username.png';
+import passwordImg from '../../assets/images/password.png';
 
 export default class LoginForm extends Component {
     constructor(props) {

@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import Login from './components/Login.js';
+import Login from './components/Login/Login.js';
 
 export default class App extends Component {
   render() {

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import Dimensions from 'Dimensions';
 import {
   StyleSheet,
@@ -13,7 +12,7 @@ import {
 } from 'react-native';
 import {Actions, ActionConst} from 'react-native-router-flux';
 
-import spinner from '../assets/images/loading.gif';
+import spinner from '../../assets/images/loading.gif';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
@@ -41,10 +40,6 @@ export default class ButtonSubmit extends Component {
           duration: 200,
           easing: Easing.linear,
         }).start();
-    
-        setTimeout(() => {
-          this._onGrow();
-        }, 2000);
     
         setTimeout(() => {
           Actions.secondScreen();
@@ -90,7 +85,6 @@ export default class ButtonSubmit extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      // top: -95,
       alignItems: 'center',
       justifyContent: 'flex-start',
     },

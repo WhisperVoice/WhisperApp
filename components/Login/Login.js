@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import LoginForm from './LoginForm';
-import Logo from './Logo';
-import SignupSection from './SignupSection';
-import ButtonSubmit from './ButtonSubmit';
+import Logo from '../SharedComponents/Logo';
+import SignupSection from '../Signup/SignupSection';
+import ButtonSubmit from '../SharedComponents/ButtonSubmit';
+import LoginStyles from './LoginStyles';
 
 export default class Login extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View style={LoginStyles.container}>
                 <Logo />
                 <LoginForm />
                 <ButtonSubmit />

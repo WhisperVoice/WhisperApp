@@ -1,6 +1,5 @@
 
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {
   StyleSheet,
   View,
@@ -11,7 +10,7 @@ import {
 } from 'react-native';
 import {Actions, ActionConst} from 'react-native-router-flux';
 
-import arrowImg from '../assets/images/left-arrow.png';
+import arrowImg from '../../assets/images/left-arrow.png';
 
 const SIZE = 40;
 
