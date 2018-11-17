@@ -11,8 +11,8 @@ export default class Login extends Component {
             <View style={styles.container}>
                 <Logo />
                 <LoginForm />
-                <SignupSection />
                 <ButtonSubmit />
+                <SignupSection />
             </View>
         );
     }
@@ -20,7 +20,7 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 2,
         alignItems: 'center',
         backgroundColor: '#000000',
     },
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     },
     logo: {
         position: 'absolute',
-        width: 300,
+        width: 400,
         height: 100,
         padding: 20
     },

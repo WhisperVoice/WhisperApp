@@ -8,7 +8,7 @@ export default class Logo extends Component {
         return (
             <View style={styles.container}>
                 <Image source={logoImg} style={styles.image}/>
-                <Text style={styles.text}>Whisper</Text>
+                <Text style={styles.text}>  Whisper  </Text>
             </View>
         );
     }
