@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 
-import UserInput from '../SharedComponents/UserInput';
+import UserInput from '../shared_components/UserInput';
 
 import usernameImg from '../../assets/images/username.png';
 import passwordImg from '../../assets/images/password.png';

@@ -14,7 +14,7 @@ import arrowImg from '../../assets/images/left-arrow.png';
 
 const SIZE = 40;
 
-export default class SecondScreen extends Component {
+export default class Home extends Component {
   constructor() {
     super();
 

@@ -42,7 +42,7 @@ export default class ButtonSubmit extends Component {
         }).start();
     
         setTimeout(() => {
-          Actions.secondScreen();
+          Actions.homeScreen();
           this.setState({isLoading: false});
           this.buttonAnimated.setValue(0);
           this.growAnimated.setValue(0);
