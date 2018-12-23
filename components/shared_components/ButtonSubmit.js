@@ -13,6 +13,7 @@ import {
 import {Actions, ActionConst} from 'react-native-router-flux';
 
 import spinner from '../../assets/images/loading.gif';
+import axios from 'axios';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
@@ -47,6 +48,19 @@ export default class ButtonSubmit extends Component {
           this.buttonAnimated.setValue(0);
           this.growAnimated.setValue(0);
         }, 2300);
+
+        let instance = axios.create({
+          baseURL: 'https://localhost:8080',
+          timeout: 1000,
+          headers: {'X-Custom-Header': 'foobar'}
+        });
+
+        instance.post('/login', {
+          firstName: 'Fred',
+          lastName: 'Flintstone'
+        }).then((resp) => {
+          console.log(resp);
+        })
       }
 
       render() {

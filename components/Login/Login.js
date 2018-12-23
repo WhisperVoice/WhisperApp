@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import LoginForm from './LoginForm';
 import Logo from '../shared_component/Logo';
 import SignupSection from '../Signup/SignupSection';
-import ButtonSubmit from '../shared_component/ButtonSubmit';
+import ButtonSubmit from '../shared_components/ButtonSubmit';
 import LoginStyles from './LoginStyles';
 
 export default class Login extends Component {
