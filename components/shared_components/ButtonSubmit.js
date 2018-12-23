@@ -41,6 +41,19 @@ export default class ButtonSubmit extends Component {
           duration: 200,
           easing: Easing.linear,
         }).start();
+        
+        let instance = axios.create({
+          baseURL: 'https://localhost:8080',
+          timeout: 1000,
+          headers: {'X-Custom-Header': 'foobar'}
+        });
+
+        axios.post('http://localhost:8080/login', {
+          firstName: 'Fred',
+          lastName: 'Flintstone'
+        }).then((resp) => {
+          console.log(resp);
+        })
     
         setTimeout(() => {
           Actions.homeScreen();
@@ -49,18 +62,6 @@ export default class ButtonSubmit extends Component {
           this.growAnimated.setValue(0);
         }, 2300);
 
-        let instance = axios.create({
-          baseURL: 'https://localhost:8080',
-          timeout: 1000,
-          headers: {'X-Custom-Header': 'foobar'}
-        });
-
-        instance.post('/login', {
-          firstName: 'Fred',
-          lastName: 'Flintstone'
-        }).then((resp) => {
-          console.log(resp);
-        })
       }
 
       render() {
