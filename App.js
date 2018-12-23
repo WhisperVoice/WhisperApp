@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import { Router, Scene, Actions, ActionConst, Stack } from 'react-native-router-flux';
 
-import Login from './components/Login/Login';
+import Login from './components/login/Login';
 import Home from './components/home/Home';
 
 export default class App extends Component {
