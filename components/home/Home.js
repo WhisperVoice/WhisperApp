@@ -1,7 +1,6 @@
 
 import React, {Component} from 'react';
 import {
-  StyleSheet,
   View,
   Image,
   TouchableOpacity,
@@ -12,6 +11,7 @@ import {
 import {Actions, ActionConst} from 'react-native-router-flux';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps'
 import arrowImg from '../../assets/images/left-arrow.png';
+import HomeStyles from './HomeStyles'
 
 const SIZE = 40;
 
@@ -52,7 +52,7 @@ export default class Home extends Component {
     return (
         <MapView
           provider={PROVIDER_GOOGLE}
-          style={ styles.map }
+          style={ HomeStyles.map }
           initialRegion={{
             latitude: 37.78825,
             longitude: -122.4324,
@@ -66,47 +66,3 @@ export default class Home extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    margin: 20,
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
-  },
-  button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: SIZE,
-    height: SIZE,
-    borderRadius: 100,
-    zIndex: 99,
-    backgroundColor: '#F035E0',
-  },
-  circle: {
-    height: SIZE,
-    width: SIZE,
-    marginTop: -SIZE,
-    borderRadius: 100,
-    backgroundColor: '#F035E0',
-  },
-  image: {
-    width: 24,
-    height: 24,
-  },
-  text: {
-    color: 'black',
-    backgroundColor: 'transparent',
-  },
-  mapContainer: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-  },
-  map: {
-    ...StyleSheet.absoluteFillObject 
-  },
-});
