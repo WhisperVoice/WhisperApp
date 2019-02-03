@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Animated,
   Easing,
+  Text
 } from 'react-native';
 import {Actions, ActionConst} from 'react-native-router-flux';
 
@@ -50,6 +51,7 @@ export default class Home extends Component {
 
     return (
       <View style={styles.container}>
+        <Text style={styles.text}>Home Screen</Text>
         <TouchableOpacity
           onPress={this._onPress}
           style={styles.button}
@@ -90,5 +92,9 @@ const styles = StyleSheet.create({
   image: {
     width: 24,
     height: 24,
+  },
+  text: {
+    color: 'black',
+    backgroundColor: 'transparent',
   },
 });
