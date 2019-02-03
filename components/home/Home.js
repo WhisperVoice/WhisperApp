@@ -10,7 +10,7 @@ import {
   Text
 } from 'react-native';
 import {Actions, ActionConst} from 'react-native-router-flux';
-
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps'
 import arrowImg from '../../assets/images/left-arrow.png';
 
 const SIZE = 40;
@@ -50,18 +50,17 @@ export default class Home extends Component {
     });
 
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>Home Screen</Text>
-        <TouchableOpacity
-          onPress={this._onPress}
-          style={styles.button}
-          activeOpacity={1}>
-          <Image style={styles.image} source={arrowImg} />
-        </TouchableOpacity>
-        <Animated.View
-          style={[styles.circle, {transform: [{scale: changeScale}]}]}
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          style ={{flex: 1}}
+          region={{
+            latitude: 42,
+            longitude: 74,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421
+          }}
+          showsUserLocation={true}
         />
-      </View>
     );
   }
 }
@@ -96,5 +95,21 @@ const styles = StyleSheet.create({
   text: {
     color: 'black',
     backgroundColor: 'transparent',
+  },
+  mapContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  map: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 });
