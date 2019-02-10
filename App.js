@@ -4,6 +4,7 @@ import { Router, Scene, Actions, ActionConst, Stack } from 'react-native-router-
 
 import Login from './components/login/Login';
 import Home from './components/home/Home';
+import Signup from './components/signup/SignupSection'
 
 export default class App extends Component {
   render() {
@@ -21,6 +22,11 @@ export default class App extends Component {
 	          animation='fade'
 	          hideNavBar={true}
 	        />
+					<Scene key="registerScreen"
+					component={Signup}
+					animation='fade'
+					hideNavBar={true}
+					/>
 	      </Stack>
 	    </Router>
     );

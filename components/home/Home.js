@@ -1,16 +1,17 @@
 
 import React, {Component} from 'react';
 import {
-  StyleSheet,
   View,
   Image,
   TouchableOpacity,
   Animated,
   Easing,
+  Text
 } from 'react-native';
 import {Actions, ActionConst} from 'react-native-router-flux';
-
+import MapView, {PROVIDER_GOOGLE} from 'react-native-maps'
 import arrowImg from '../../assets/images/left-arrow.png';
+import HomeStyles from './HomeStyles'
 
 const SIZE = 40;
 
@@ -49,46 +50,18 @@ export default class Home extends Component {
     });
 
     return (
-      <View style={styles.container}>
-        <TouchableOpacity
-          onPress={this._onPress}
-          style={styles.button}
-          activeOpacity={1}>
-          <Image style={styles.image} source={arrowImg} />
-        </TouchableOpacity>
-        <Animated.View
-          style={[styles.circle, {transform: [{scale: changeScale}]}]}
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          style={ HomeStyles.map }
+          initialRegion={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+          showsUserLocation={true}
+          showsMyLocationButton={true}
         />
-      </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    margin: 20,
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
-  },
-  button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: SIZE,
-    height: SIZE,
-    borderRadius: 100,
-    zIndex: 99,
-    backgroundColor: '#F035E0',
-  },
-  circle: {
-    height: SIZE,
-    width: SIZE,
-    marginTop: -SIZE,
-    borderRadius: 100,
-    backgroundColor: '#F035E0',
-  },
-  image: {
-    width: 24,
-    height: 24,
-  },
-});

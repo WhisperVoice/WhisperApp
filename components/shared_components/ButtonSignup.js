@@ -11,12 +11,12 @@ import {
   View,
 } from 'react-native';
 import {Actions, ActionConst} from 'react-native-router-flux';
+
 import spinner from '../../assets/images/loading.gif';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 const MARGIN = 40;
-const MARGIN_BOTTOM = 20;
 
 export default class ButtonSubmit extends Component {
     constructor() {
@@ -41,9 +41,10 @@ export default class ButtonSubmit extends Component {
           easing: Easing.linear,
         }).start();
 
-
+        
+    
         setTimeout(() => {
-          Actions.homeScreen();
+          Actions.registerScreen();
           this.setState({isLoading: false});
           this.buttonAnimated.setValue(0);
           this.growAnimated.setValue(0);
@@ -71,7 +72,7 @@ export default class ButtonSubmit extends Component {
                 {this.state.isLoading ? (
                   <Image source={spinner} style={styles.image} />
                 ) : (
-                  <Text style={styles.text}>LOGIN</Text>
+                  <Text style={styles.text}>REGISTER</Text>
                 )}
               </TouchableOpacity>
               <Animated.View
@@ -85,10 +86,11 @@ export default class ButtonSubmit extends Component {
 
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+    },
     button: {
       alignItems: 'center',
       justifyContent: 'center',
@@ -96,11 +98,11 @@ const styles = StyleSheet.create({
       height: MARGIN,
       borderRadius: 20,
       zIndex: 100,
-      marginBottom: -MARGIN_BOTTOM,
     },
     circle: {
       height: MARGIN,
       width: MARGIN,
+      marginTop: -MARGIN,
       borderWidth: 1,
       borderColor: '#000000',
       borderRadius: 100,
