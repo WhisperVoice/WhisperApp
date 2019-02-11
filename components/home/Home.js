@@ -1,17 +1,15 @@
 
 import React, {Component} from 'react';
 import {
+  Text,
   View,
-  Image,
-  TouchableOpacity,
   Animated,
-  Easing,
-  Text
+  Easing
 } from 'react-native';
 import {Actions, ActionConst} from 'react-native-router-flux';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import HomeStyles from './HomeStyles';
-import {Constants} from 'expo';
+import VoiceMenu from '../voice_menu/VoiceMenu'
 
 const SIZE = 40;
 
@@ -85,13 +83,17 @@ export default class Home extends Component {
     });
 
     return (
-          <MapView
+      <View style={{flex: 1}}>
+        <MapView
             provider={PROVIDER_GOOGLE}
             style={this.state.flex}
             region={this.state.region}
             showsUserLocation={true}
             showsMyLocationButton={true}
           />
+        <VoiceMenu> </VoiceMenu>
+      </View>
+          
     );
   }
 }

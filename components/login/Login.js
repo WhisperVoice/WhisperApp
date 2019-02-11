@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import LoginForm from './LoginForm';
 import Logo from '../shared_components/Logo';
 import ButtonSignup from '../shared_components/ButtonSignup';
