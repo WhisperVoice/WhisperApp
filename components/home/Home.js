@@ -15,13 +15,25 @@ import {Constants} from 'expo';
 
 const SIZE = 40;
 
+export const getCurrentLocation = () => {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(position => resolve(position), e=> reject(e));
+  });
+};
+
 export default class Home extends Component {
   constructor() {
     super();
 
     this.state = {
       isLoading: false,
-      flex: 0
+      flex: 0,
+      region: { 
+        latitude: 37.78825,
+        longitude: -122.4324,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      }
     };
 
     this._onPress = this._onPress.bind(this);
@@ -32,6 +44,21 @@ export default class Home extends Component {
     setTimeout(()=> {
       this.setState({flex: HomeStyles.map})
     }, 500);
+  }
+
+  componentDidMount() {
+    return getCurrentLocation().then(position => {
+      if (position) {
+        this.setState({
+          region: {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            latitudeDelta: 0.003,
+            longitudeDelta: 0.003,
+          },
+        });
+      }
+    });
   }
 
   _onPress() {
@@ -61,12 +88,7 @@ export default class Home extends Component {
           <MapView
             provider={PROVIDER_GOOGLE}
             style={this.state.flex}
-            initialRegion={{ 
-              latitude: 37.78825,
-              longitude: -122.4324,
-              latitudeDelta: 0.0922,
-              longitudeDelta: 0.0421,
-            }}
+            region={this.state.region}
             showsUserLocation={true}
             showsMyLocationButton={true}
           />

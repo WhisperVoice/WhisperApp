@@ -2,11 +2,7 @@ import React, {Component} from 'react';
 import Dimensions from 'Dimensions';
 import {
   StyleSheet,
-  KeyboardAvoidingView,
-  View,
-  ActivityIndicator,
-  TouchableOpacity,
-  Image,
+  KeyboardAvoidingView
 } from 'react-native';
 
 import UserInput from '../shared_components/UserInput';
