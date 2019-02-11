@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 import Dimensions from 'Dimensions';
-import {
-  StyleSheet,
-  KeyboardAvoidingView
-} from 'react-native';
+import { KeyboardAvoidingView } from 'react-native';
 
-import UserInput from '../shared_components/UserInput';
 import LoginStyles from './LoginStyles'
+import UserInput from '../shared_components/UserInput';
 import usernameImg from '../../assets/images/username.png';
 import passwordImg from '../../assets/images/password.png';
 
@@ -47,6 +44,3 @@ export default class LoginForm extends Component {
         );
       }
 }
-
-const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT = Dimensions.get('window').height;
