@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import UserInput from '../shared_components/UserInput';
-
+import LoginStyles from './LoginStyles'
 import usernameImg from '../../assets/images/username.png';
 import passwordImg from '../../assets/images/password.png';
 
@@ -27,7 +27,7 @@ export default class LoginForm extends Component {
 
       render() {
         return (
-          <KeyboardAvoidingView behavior="padding" style={styles.container}>
+          <KeyboardAvoidingView behavior="padding" style={LoginStyles.container}>
             <UserInput
               source={usernameImg}
               placeholder="Username"
@@ -50,20 +50,3 @@ export default class LoginForm extends Component {
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: 'center',
-    },
-    btnEye: {
-      position: 'absolute',
-      top: 55,
-      right: 28,
-    },
-    iconEye: {
-      width: 25,
-      height: 25,
-      tintColor: 'rgba(0,0,0,0.2)',
-    },
-  });
