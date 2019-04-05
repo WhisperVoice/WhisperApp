@@ -1,0 +1,60 @@
+Arguments: 
+  E:\Program Files (x86)\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add --dev typescript
+
+PATH: 
+  E:\Program Files (x86)\Downloads\cmder_mini\bin;E:\Program Files (x86)\Downloads\cmder_mini\vendor\conemu-maximus5\ConEmu\Scripts;E:\Program Files (x86)\Downloads\cmder_mini\bin;E:\Program Files (x86)\Downloads\cmder_mini\vendor\conemu-maximus5\ConEmu\Scripts;E:\Program Files (x86)\Downloads\cmder_mini\vendor\conemu-maximus5;E:\Program Files (x86)\Downloads\cmder_mini\vendor\conemu-maximus5\ConEmu;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\Leon\Downloads\curl-7.59.0-win64-mingw\curl-7.59.0-win64-mingw\bin\;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\Program Files\Microsoft VS Code\bin;C:\ProgramData\chocolatey\bin;E:\Program Files (x86)\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Go\bin;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\Leon\AppData\Local\Microsoft\WindowsApps;C:\Users\Leon\AppData\Local\atom\bin;C:\Users\Leon\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Python 3.6;C:\Users\Leon\AppData\Local\Microsoft\WindowsApps;C:\Users\Leon\AppData\Roaming\npm;C:\Users\Leon\AppData\Local\Yarn\bin;C:\Users\Leon\go\bin;E:\Program Files (x86)\Git\usr\bin;E:\Program Files (x86)\Git\usr\share\vim\vim74;E:\Program Files (x86)\Downloads\cmder_mini\;E:\Program Files (x86)\Git\usr\bin;E:\Program Files (x86)\Git\usr\share\vim\vim74;E:\Program Files (x86)\Downloads\cmder_mini\
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  10.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/lottie-react-native/-/lottie-react-native-2.5.0.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:129645:19)
+      at Object.onceWrapper (events.js:273:13)
+      at ClientRequest.emit (events.js:182:13)
+      at TLSSocket.emitRequestTimeout (_http_client.js:661:40)
+      at Object.onceWrapper (events.js:273:13)
+      at TLSSocket.emit (events.js:182:13)
+      at TLSSocket.Socket._onTimeout (net.js:449:8)
+      at ontimeout (timers.js:436:11)
+      at tryOnTimeout (timers.js:300:5)
+      at listOnTimeout (timers.js:263:5)
+
+npm manifest: 
+  {
+    "name": "empty-project-template",
+    "main": "node_modules/expo/AppEntry.js",
+    "private": true,
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "axios": "^0.18.0",
+      "expo": "^31.0.6",
+      "react": "16.5.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+      "react-native-maps": "^0.23.0",
+      "react-native-router-flux": "^4.0.6",
+      "react-native-sliding-up-down-panel": "^1.0.0",
+      "react-native-sliding-up-down-panels": "^1.0.0",
+      "rn-sliding-up-panel": "^1.3.1"
+    },
+    "devDependencies": {
+      "babel-preset-expo": "^5.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

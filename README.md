@@ -7,6 +7,6 @@
 - run `npm install`
 - run `npm install expo-cli --global`
 - download the expo app in your phones app store: https://expo.io/tools
-- run `npm start`
+- run `npm start` or `expo start`
 - scan the generated QR code with mobile expo app. (It make take a while for the app to load)
 
