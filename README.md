@@ -10,3 +10,5 @@
 - run `npm start` or `expo start`
 - scan the generated QR code with mobile expo app. (It make take a while for the app to load)
 
+Note that the device where you have the expo app and the device on which you started the expo project must be connected to the same wifi network.
+
