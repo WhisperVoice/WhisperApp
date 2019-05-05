@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import {Actions, ActionConst} from 'react-native-router-flux';
 import spinner from '../../assets/images/loading.gif';
+import axios from "axios";
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
@@ -47,7 +48,7 @@ export default class ButtonSubmit extends Component {
           headers: {'X-Custom-Header': 'foobar'}
         });
 
-        axios.post('http://192.168.86.36:8080/login', {
+        axios.post('http://10.1.10.116:8080/login', {
           firstName: 'Fred',
           lastName: 'Flintstone'
         }).then((resp) => {
