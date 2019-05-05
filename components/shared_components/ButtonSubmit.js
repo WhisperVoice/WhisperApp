@@ -37,18 +37,29 @@ export default class ButtonSubmit extends Component {
         this.setState({isLoading: true});
         Animated.timing(this.buttonAnimated, {
           toValue: 1,
-          duration: 100,
+          duration: 200,
           easing: Easing.linear,
         }).start();
+        
+        let instance = axios.create({
+          baseURL: 'https://localhost:8080',
+          timeout: 1000,
+          headers: {'X-Custom-Header': 'foobar'}
+        });
 
-
+        axios.post('http://192.168.86.36:8080/login', {
+          firstName: 'Fred',
+          lastName: 'Flintstone'
+        }).then((resp) => {
+          console.log(resp);
+        })
+    
         setTimeout(() => {
           Actions.homeScreen();
           this.setState({isLoading: false});
           this.buttonAnimated.setValue(0);
           this.growAnimated.setValue(0);
         }, 2300);
-
       }
 
       render() {
